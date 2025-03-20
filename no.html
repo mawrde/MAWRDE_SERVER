@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AN EROR</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-size: larger;
+        }
+        body{
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            height: 80%;
+            width: 80%;
+            display: grid ;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(1fr,2);
+            border-radius: 20px;
+            row-gap: 25%;
+            padding: 20px;
+            box-shadow: 0 0 50px red;
+        }
+        div *{
+            background-color: red;
+            color: black;
+            border-radius: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 200%;
+        }
+        a{
+            text-decoration: none;
+            transition: 2s;
+        }
+        a:hover{
+            transform: scale(120%);
+            border-radius: 70px;
+            text-decoration: underline solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>لقد تم إدخال قيمة خاطئة</p>
+        <a href="/my">رجوع</a>
+    </div>
+</body>
+</html>

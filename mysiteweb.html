@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAWRDE</title>
+    <style>
+        *{
+            margin: 0;
+            font-size: larger;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            grid-template-columns:1fr ;
+            grid-template-rows: 1fr 1fr;
+            background: linear-gradient(rgb(206, 151, 0),rgb(104, 85, 0))
+        }
+        body div{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .a{
+            background-color: rgba(255, 255, 255, 0.164);
+            font-size: 300%;
+            color: blueviolet;
+            animation: f 10s ease infinite;
+
+
+        }
+        @keyframes f{
+            5%{
+                color: blueviolet;
+            }
+            10%{
+                color: red;
+            }
+            20%{
+color: orange;
+            }
+            30%{
+                color: yellow;
+            }
+            40%{
+                color: blue;
+            }
+            50%{
+                color: blueviolet;
+            }
+            60%{
+                color: black;
+            }
+            70%{
+                color: white;
+            }
+            80%{
+               color: aqua; 
+            }
+            90%{
+                color: brown;
+            }
+            95%{
+                color: rgba(0, 0, 0, 0);
+            }
+            100%{
+                color: blueviolet;
+            }
+        }
+        a{
+color: chocolate;
+text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="a" dir="rtl">
+    مرحبا بك   :)
+</div>
+<div class="b">
+    <a href="/all" dir="rtl">   رؤية جميع الروابط</a>
+</div>
+</body>
+</html>

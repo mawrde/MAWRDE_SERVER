@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X & O GAME</title>
+    <style>
+        *{
+            padding: 0;
+            font-size: larger;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            background: linear-gradient(rgb(46, 33, 71) , black);
+            padding: 100px;
+        }
+        .parent_of_program{
+            height: 80%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+        }
+        .above_text{
+            display: flex;
+            align-items: center;
+        }
+        .game_inter_face{
+            height: 80%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+        .game_inter_face div{
+background-color: blueviolet;
+font-size: larger;
+display: flex;
+font-weight: bolder;
+align-items: center;
+justify-content: center;
+text-transform: uppercase;
+
+        }
+
+    </style>
+    <script>
+
+window.screen.availWidth
+
+
+
+function fx(t) {
+    if (document.getElementById(t).innerHTML != "") {
+        return true
+    }
+}
+
+
+
+let x = "x"
+let y = "o"
+let cn = 1
+let de = document.getElementById;
+function hi() {
+    document.getElementById("1").style.background = "blueviolet"
+    document.getElementById("2").style.background = "blueviolet"
+    document.getElementById("3").style.background = "blueviolet"
+    document.getElementById("4").style.background = "blueviolet"
+    document.getElementById("5").style.background = "blueviolet"
+    document.getElementById("6").style.background = "blueviolet"
+    document.getElementById("7").style.background = "blueviolet"
+    document.getElementById("8").style.background = "blueviolet"
+    document.getElementById("9").style.background = "blueviolet"
+}
+
+function h(id) {
+    if (cn < 10) {
+if (cn == 1 || cn == 3 || cn == 5 || cn == 7 || cn == 9) {
+    hi()
+    document.getElementById(id).innerHTML = x
+    document.getElementById(id).style.background = "red"
+    cn = cn +1
+}else if (cn == 4 || cn == 2 || cn == 6 || cn == 8) {
+    document.getElementById(id).innerHTML = y
+    cn = cn +1
+    hi()
+    document.getElementById(id).style.background = "red"
+}else {
+    console.log("GAME IS END")
+}
+
+
+
+function CECK_WINNER(a,b,c) {
+    if (document.getElementById(a).innerHTML == document.getElementById(b).innerHTML && document.getElementById(b).innerHTML == document.getElementById(c).innerHTML && document.getElementById(b).innerHTML != "") {
+        if (cn == 1 || cn == 3 || cn == 5 || cn == 7 || cn == 9) {
+            document.getElementById("winner").innerHTML = "THE WINNER IS O"
+            document.getElementById("winner").style.fontSize = "200%"
+            document.getElementById("winner").style.color = "yellow"
+            cn = 11
+        }else {
+            document.getElementById("winner").innerHTML = "THE WINNER IS X"
+            document.getElementById("winner").style.fontSize = "200%"
+            document.getElementById("winner").style.color = "yellow"
+            cn = 11
+        }
+        document.getElementById(a).style.background = "yellow"
+        document.getElementById(b).style.background = "yellow"
+        document.getElementById(c).style.background = "yellow"
+    }
+
+
+
+
+}
+
+CECK_WINNER("1","2","3")
+CECK_WINNER("4","5","6")
+CECK_WINNER("7","8","9")
+CECK_WINNER("1","5","9")
+CECK_WINNER("3","5","7")
+CECK_WINNER("1","4","7")
+CECK_WINNER("2","5","8")
+CECK_WINNER("3","6","9")
+
+
+
+if (fx(1) && fx(2) && fx(3) && fx(4) && fx(6)  && fx(5) && fx(7) && fx(8) && fx(9) && cn != 11 ) {
+    
+    document.getElementById("1").style.background = "blue"
+    document.getElementById("2").style.background = "blue"
+    document.getElementById("3").style.background = "blue"
+    document.getElementById("4").style.background = "blue"
+    document.getElementById("5").style.background = "blue"
+    document.getElementById("6").style.background = "blue"
+    document.getElementById("7").style.background = "blue"
+    document.getElementById("8").style.background = "blue"
+    document.getElementById("9").style.background = "blue"
+    document.getElementById("winner").innerHTML = "DRAW"
+            document.getElementById("winner").style.fontSize = "200%"
+            document.getElementById("winner").style.color = "red"
+
+
+}else {
+    console.log("play")
+}
+
+}}
+function ch(a1) {
+cv = document.getElementById(a1).innerHTML
+    if (cv == "") {
+        h(a1)
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+    <div class="parent_of_program">
+
+
+
+        <div id="winner" class="above_text" style="color: brown;">
+
+        <p style="text-align: center;">X & O GAME <span style="color: yellow;">CLICK ON ANY PLACE TO PLAY</span></p>
+        </div>
+
+        <div class="game_inter_face">
+            <div class="all_sq" onclick="ch(1)" id="1"></div>
+            <div class="all_sq" onclick="ch(2)" id="2"></div>
+            <div class="all_sq" onclick="ch(3)" id="3"></div>
+            <div class="all_sq" onclick="ch(4)" id="4"></div>
+            <div class="all_sq" onclick="ch(5)" id="5"></div>
+            <div class="all_sq" onclick="ch(6)" id="6"></div>
+            <div class="all_sq" onclick="ch(7)" id="7"></div>
+            <div class="all_sq" onclick="ch(8)" id="8"></div>
+            <div class="all_sq" onclick="ch(9)" id="9"></div>
+        </div>
+        
+
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

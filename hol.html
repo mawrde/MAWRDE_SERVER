@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حول !!</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        body{
+            overflow: hidden;
+            height: 100vh;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .all{
+
+            height: 90%;
+            background-color: rgba(0, 0, 0, 0.274);
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 5%;
+            justify-items: center;
+            padding: 2%;
+            border-radius: 20px;
+            box-shadow: 0 0 50px #0fe;
+            animation: x 3s linear infinite ;
+        }
+        .all *{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.13);
+            width: 98%;
+        }
+        a{
+            color: rgb(123, 255, 0);
+            text-decoration: none;
+            font-size: 300%;
+            transition: 1s;
+            animation: v 3s linear infinite ;
+        }
+        a:hover{
+            word-spacing: 20px;
+            font-size: 350%;
+            letter-spacing: 8px;
+        }
+        p{
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 200%;
+            font-weight: 25px;
+            color: #0fe;
+            animation: v 3s linear infinite ;
+        }
+        @keyframes v {
+            0%{
+                color: #0fe;
+            }
+            20%{
+                color: red;
+            }
+            40%{
+                color: orange;
+            }
+            60%{
+                color: yellow;
+            }
+            80%{
+                color: green;
+            }
+            100%{
+                color: #0fe;
+            }
+        }
+        @keyframes x {
+            0%{
+                box-shadow: 0 0 50px #0fe;
+            }
+            20%{
+                box-shadow: 0 0 50px red;
+            }
+            40%{
+                box-shadow: 0 0 50px orange;
+            }
+            60%{
+                box-shadow: 0 0 50px yellow;
+            }
+            80%{
+                box-shadow: 0 0 50px green;
+            }
+            100%{
+                box-shadow: 0 0 50px #0fe;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <a href="/all">GO BACK</a>
+        <p style="letter-spacing: 5px;word-spacing: 10px;text-align: center;">ABD AL RAHMAN AL MAWRDE</p>
+        <p>(HTML , CSS , JAVASCRIPT , MERN_STACK , PHP , PYTHON , FULL_STACK ,BACK_END , FRONT_END)</p>
+    </div>
+</body>
+</html>

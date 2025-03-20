@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTER A TRUE VALUE</title>
+<style>
+    *{
+        
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 0;
+        margin: 0;
+        color: #0fe;
+        font-size: 100%;
+    }
+    *::selection{
+        border: #0fe;
+    }
+    body{
+        
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 250%;
+        align-items: center;
+        /*vbcgcggdhvgdd*/
+    }
+    div{
+
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10%;
+        height: 80%;
+        width: 90%;
+        padding: 2%;
+        border-radius: 20px;
+        box-shadow: 0 0 25px #0fe;
+        animation: x 3s linear infinite ;
+        background-color: rgb(0, 0, 0);
+    }
+    form{
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1fr,3);
+        row-gap:25%;
+        justify-items: center;
+        align-items: center;
+        position: relative;
+        bottom: 50%;
+    }
+    .hh{
+        outline: none;
+        width: 100%;
+        letter-spacing: 5px;
+        border: none;
+        font-size: 100%;
+        background: none;
+        animation: z 3s linear infinite ;
+        border-bottom: solid 2px #0fe;
+    }
+    .gh{
+        border-radius: 20px;
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        border: none;
+        letter-spacing: 4px;
+        word-spacing: 8px;
+        background-color: #0fe;
+        color: black;
+        width: 100%;
+        animation: y 3s linear infinite ;
+        transition: 2s;
+    }
+    .gh:hover{
+        transform: scale(110%);
+       
+    }
+    .hh::placeholder{
+        
+        animation: v 3s linear infinite ;
+    }
+    
+
+    @keyframes v {
+            0%{
+                color: #0fe;
+            }
+            20%{
+                color: red;
+            }
+            40%{
+                color: orange;
+            }
+            60%{
+                color: yellow;
+            }
+            80%{
+                color: green;
+            }
+            100%{
+                color: #0fe;
+            }
+        }
+        @keyframes x {
+            0%{
+                box-shadow: 0 0 50px #0fe;
+            }
+            20%{
+                box-shadow: 0 0 50px red;
+            }
+            40%{
+                box-shadow: 0 0 50px orange;
+            }
+            60%{
+                box-shadow: 0 0 50px yellow;
+            }
+            80%{
+                box-shadow: 0 0 50px green;
+            }
+            100%{
+                box-shadow: 0 0 50px #0fe;
+            }
+        }
+
+        @keyframes y {
+            0%{
+                background-color: #0fe;
+            }
+            20%{
+                background-color: red;
+            }
+            40%{
+                background-color: orange;
+            }
+            60%{
+                background-color: yellow;
+            }
+            80%{
+                background-color: green;
+            }
+            100%{
+                background-color: #0fe;
+            }
+        }
+
+        @keyframes z {
+            0%{
+                color: #0fe;
+                 border-bottom: solid 2px #0fe;
+            }
+            20%{
+                color: red;
+                 border-bottom: solid 2px red;
+            }
+            40%{
+                color: orange;
+                 border-bottom: solid 2px orange;
+            }
+            60%{
+                color: yellow;
+                 border-bottom: solid 2px yellow;
+            }
+            80%{
+                color: green;
+                border-bottom: solid 2px  green;
+            }
+            100%{
+                color: #0fe;
+                border-bottom: solid 2px  #0fe;
+            }
+        }
+
+
+
+</style>
+</head>
+<body>
+    
+    <div><p style="text-align: center;animation: v 3s linear infinite ;letter-spacing: 10px;word-spacing: 10px;">SIGN IN</p>
+        <form action="/log" method="POST">
+            <input class="hh" type="text" name="usr" required placeholder="USERNAME">
+            <input class="hh" type="password" name="pass" required placeholder="PASSWORD">
+            <input class="gh" type="submit" value="SIGN IN">
+        </form>
+    </div>
+</body>
+</html>
